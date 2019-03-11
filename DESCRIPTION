@@ -1,0 +1,24 @@
+Package: mpinterests
+Type: Package
+Title: A package for scraping data from the "Register of Members'
+    Financial Interests".
+Version: 0.1.0
+Author: Noel Dempsey
+Maintainer: Noel Dempsey <noel.dempsey@outlook.com>
+Description: This package uses web scraping to gather data contained within the
+    House of Commons' "Register of Members' Financial Interests" (RMFI). Each 
+    available function in the package focuses on scraping data under one of the
+    specified categories in the RMFI. Each function returns a tibble where each
+    row is one entry in the register.
+License: MIT
+Encoding: UTF-8
+LazyData: true
+Imports:
+  rvest,
+  stringr,
+  purrr,
+  dplyr,
+  tibble,
+  magrittr,
+  xml2
+RoxygenNote: 6.1.1
