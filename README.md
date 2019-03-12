@@ -7,7 +7,7 @@ According to [Parliament](https://www.parliament.uk/mps-lords-and-offices/standa
 ## Usage
 The package provides one primary function to web scrape the RMFI: ```download_mpinterests```. The scraped data is stored as a list in a seperate environment inside the function, although if you wanted to inspect the raw data you can assign the returned list as local variable when calling the function. You need to call ```download_mpinterests``` first, by providing it with the URL of the RMFI contents page of interest, before calling any secondary function.
 
-The secondary functions are all prefixed ```get_*``` and return tibbles based on the ten categories as defined in the RMFI rules where each row is one entry. For example, ```get_employment_and_earnings``` returns a tibble of all the entries under "Category 1: Employment and earnings".
+The secondary functions are all prefixed ```get_*``` and return tibbles based on the ten categories as defined in the RMFI rules where each row is one entry. For example, ```get_employment_and_earnings``` returns a tibble of all the entries under "Category 1: Employment and earnings". Sometimes there will be NAs introduced to the returned tibbles even if there is an entry for an MP; this is usually going to be due to inconsistencies in the MPs' web page HTML - see testing and reliability for further information.
 
 The package is intended to work with the RFMI of the 2015-16 session and after as the RMFIs for sessions before 2015-16 are structured in a fundamentally different way. 
 
