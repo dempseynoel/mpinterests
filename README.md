@@ -9,7 +9,7 @@ The package provides one primary function to web scrape the RMFI: ```download_mp
 
 The secondary functions are all prefixed ```get_*``` and return tibbles based on the ten categories as defined in the RMFI rules where each row is one entry. For example, ```get_employment_and_earnings``` returns a tibble of all the entries under "Category 1: Employment and earnings". Sometimes there will be NAs introduced to the returned tibbles even if there is an entry for an MP; this is usually going to be due to inconsistencies in the MPs' web page HTML - see testing and reliability for further information.
 
-The package is intended to work with the RFMI of the 2015-16 session and after as the RMFIs for sessions before 2015-16 are structured in a fundamentally different way.
+The package is intended to work with the RFMI of the 2015-16 session and after. The RMFIs for sessions before 2015-16 are structured in a fundamentally different way.
 
 ## Example
 ![](mpinterests.gif)
