@@ -12,7 +12,9 @@ The secondary functions are all prefixed ```get_*``` and return tibbles based on
 The package is intended to work with the RFMI of the 2015-16 session and after. The RMFIs for sessions before 2015-16 are structured in a fundamentally different way.
 
 ## Example
-![](mpinterests.gif)
+<p align="center">
+  <img src="mpinterests.gif" width="50%" align="centre">
+</p>
 
 ## Testing and reliability
 This package has **not** undergone any formal unit testing. This is deliberate as unit testing implies a certain level of guaranteed performance. As the RMFI is only available through a web page or a PDF, both of which are produced by hand for each edition, it is not possible to ensure that the package will perform as expected for any given edition of the RMFI. For example, there only needs to be one change in a page as a resut of human error for functions not to return the expected results. There is no guarantee that the package will continue to work for all future editions of the RMFI.
