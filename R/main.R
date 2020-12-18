@@ -86,7 +86,7 @@ get_donations_and_support <- function() {
   tibble_a <- purrr::map_df(contents, handle_category_tibble,
     category_a, end_pattern_a, date)
   tibble_a <- handle_entry(tibble_a, "donor_name",
-    "Name of Donor:(.*?)Address of donor")
+    "Name of donor:(.*?)Address of donor")
   tibble_a <- handle_entry(tibble_a, "donor_address",
     "Address of donor:(.*?)Amount")
   tibble_a <- handle_entry(tibble_a, "donor_donation",

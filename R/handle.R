@@ -67,10 +67,10 @@ handle_category_tibble <- function(contents, category, end_pattern, date) {
 #' @keywords internal
 
 handle_entry <- function(tibble, col_name, pattern) {
-  tibble[col_name] <- tibble$entries %>%
-    stringr::str_match(.,
+  entries <- tibble$entries %>%
+    stringr::str_match(
       stringr::regex(pattern = pattern, ignore_case = TRUE)) %>%
     trimws()
-  tibble[col_name] <- tibble[[col_name]][,2]
+  tibble[col_name] <- entries[,2]
   tibble
 }
