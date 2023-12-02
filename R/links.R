@@ -33,6 +33,7 @@ handle_mp_urls <- function(contents_page) {
 #' @keywords internal
 
 handle_mp_page <- function(mp_url, progress_bar) {
+  Sys.sleep(2)
   progress_bar$tick()$print()
   mp_page <- xml2::read_html(mp_url) %>%
     rvest::html_nodes(xpath = '//*[@id="mainTextBlock"]/p') %>%
